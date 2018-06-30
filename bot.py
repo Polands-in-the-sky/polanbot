@@ -11,6 +11,7 @@ import asyncio
 import random
 import time
 import json
+
 reddit=praw.Reddit('bot1')
 secrets_file=open("secrets.json")
 secrets=secrets_file.read()
@@ -54,7 +55,10 @@ async def redditpopular(ctx,arg):
     subreddit = reddit.subreddit(arg)
     for submission in subreddit.hot(limit=1):
         embed=discord.Embed(title=submission.title,description=submission.selftext,color=embedcolor)
-        embed.set_footer("{} Points".format(submission.score))
+        embed.add_field(name="Points",value=submission.score)
         await bot.say(embed=embed)
+
+@bot.command(pass_context=True)
+async def 
 
 bot.run(secret['token'])
