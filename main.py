@@ -32,19 +32,19 @@ async def ping(ctx):
 
 @bot.command(pass_context=True)
 async def work():
-    responses1=[
+    work_responses1=[
         "Superb",
         "Phenomenal",
         "Horrendous",
         "Retarded"
     ]
-    responses2=[
+    work_responses2=[
         "Scraper",
         "Eater",
         "Sleeper"
     ]
-    response=random.choice(responses1)+" "+random.choice(responses2)
-    embed=discord.Embed(description="Hmn... your job is a **{}**".format(response),color=embedcolor)
+    work_response=random.choice(work_responses1)+" "+random.choice(work_responses2)
+    embed=discord.Embed(description="Hmn... your job is a **{}**".format(work_response),color=embedcolor)
     await bot.say(embed=embed)
     localtime = time.localtime(time.time())
     print("User requested command work.")
