@@ -12,7 +12,7 @@ import random
 import time
 import json
 
-secrets_file=open("/mnt/e/kurwa/руст/polanbot/secrets.json")
+secrets_file=open("secrets.json")
 secrets=secrets_file.read()
 secret=json.loads(secrets)
 embedcolor=0x64C13F
