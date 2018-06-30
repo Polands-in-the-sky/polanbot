@@ -24,7 +24,6 @@ async def on_ready():
     print ("huehuehue")
     print ("I am running on " + bot.user.name)
     print ("With the ID: " + bot.user.id)
-    print("my name na {}".format(secret['botname']))
 
 @bot.command(pass_context=True)
 async def ping(ctx):
@@ -68,5 +67,6 @@ async def info(ctx, user: discord.Member):
     embed.add_field(name="Joined", value=user.joined_at)
     embed.set_thumbnail(url=user.avatar_url)
     await bot.say(embed=embed)
+
 
 bot.run(secret['token'])
