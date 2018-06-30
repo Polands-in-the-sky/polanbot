@@ -54,7 +54,7 @@ async def redditpopular(ctx,arg):
     subreddit = reddit.subreddit(arg)
     for submission in subreddit.hot(limit=1):
         embed=discord.Embed(title=submission.title,description=submission.selftext,color=embedcolor)
-        embed.add_field(name="Points",value=submission.score)
+        embed.set_footer("{} Points".format(submission.score))
         await bot.say(embed=embed)
 
 bot.run(secret['token'])
