@@ -11,7 +11,7 @@ import asyncio
 import random
 import time
 import json
-redditbot=praw.Reddit('bot1')
+reddit=praw.Reddit('bot1')
 secrets_file=open("secrets.json")
 secrets=secrets_file.read()
 secret=json.loads(secrets)
