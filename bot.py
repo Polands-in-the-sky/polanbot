@@ -11,7 +11,6 @@ import asyncio
 import random
 import time
 import json
-
 reddit=praw.Reddit('bot1')
 secrets_file=open("secrets.json")
 secrets=secrets_file.read()
@@ -48,7 +47,7 @@ async def work():
     await bot.say(embed=embed)
     localtime = time.localtime(time.time())
     print("User requested command work.")
-
+#Reddit related functionalities
 @bot.command(pass_context=True)
 async def redditpopular(ctx,arg):
     subreddit = reddit.subreddit(arg)
