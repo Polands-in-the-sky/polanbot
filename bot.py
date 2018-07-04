@@ -45,7 +45,7 @@ async def work():
     ]
     work_response=random.choice(work_responses1)+" "+random.choice(work_responses2)
     embed=discord.Embed(description="Hmn... your job is a **{}**".format(work_response),color=embedcolor)
-    embed.add_field(name="Money earned",value="You earned ${} from that.".format(random.randint(1,1000)))
+    embed.add_field(name="Money earned",value=":moneybag: You earned ${} from that. :moneybag:".format(random.randint(1,1000)))
     await bot.say(embed=embed)
     localtime = time.localtime(time.time())
     print("User requested command work.")
