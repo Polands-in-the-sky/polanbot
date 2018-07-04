@@ -48,6 +48,7 @@ async def work():
     localtime = time.localtime(time.time())
     print("User requested command work.")
 #Reddit related functionalities
+
 @bot.command(pass_context=True)
 async def redditpopular(ctx,arg):
     subreddit = reddit.subreddit(arg)
