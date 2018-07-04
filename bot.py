@@ -10,11 +10,12 @@ from discord.ext.commands import Bot
 import asyncio
 import random
 import time
-import rethinkdb
+import rethinkdb as r
 import json
 import modules.voice
 import modules.games
 reddit=praw.Reddit('bot1')
+conn=r.connect()
 secrets_file=open("secrets.json")
 secrets=secrets_file.read()
 secret=json.loads(secrets)
@@ -31,6 +32,7 @@ async def on_ready():
 async def ping(ctx):
     embed=discord.Embed(description="Pong! :ping_pong:",color=embedcolor)
     await bot.say(embed=embed)
+    
 
 @bot.command(pass_context=True)
 async def work():
