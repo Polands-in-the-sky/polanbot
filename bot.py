@@ -11,6 +11,7 @@ import asyncio
 import random
 import time
 import json
+import modules.voice
 reddit=praw.Reddit('bot1')
 secrets_file=open("secrets.json")
 secrets=secrets_file.read()
