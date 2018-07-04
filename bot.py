@@ -10,8 +10,10 @@ from discord.ext.commands import Bot
 import asyncio
 import random
 import time
+import rethinkdb
 import json
 import modules.voice
+import modules.games
 reddit=praw.Reddit('bot1')
 secrets_file=open("secrets.json")
 secrets=secrets_file.read()
