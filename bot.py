@@ -4,7 +4,6 @@ import pdb
 import re
 import os
 import discord
-import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
@@ -15,7 +14,6 @@ import json
 import modules.voice
 import modules.games
 reddit=praw.Reddit('bot1')
-conn=r.connect()
 secrets_file=open("secrets.json")
 secrets=secrets_file.read()
 secret=json.loads(secrets)
@@ -27,6 +25,7 @@ async def on_ready():
     print ("huehuehue")
     print ("I am running on " + bot.user.name)
     print ("With the ID: " + bot.user.id)
+    conn=r.connect(port=8015,db="db")
 
 @bot.command(pass_context=True)
 async def ping(ctx):
