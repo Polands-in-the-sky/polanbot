@@ -19,7 +19,7 @@ secrets=secrets_file.read()
 secret=json.loads(secrets)
 embedcolor=0x64C13F
 bot = commands.Bot(command_prefix=secret['command_prefix'])
-print("Oi you wot")
+print("Oi you wot m8")
 @bot.event
 async def on_ready():
     print ("huehuehue")
