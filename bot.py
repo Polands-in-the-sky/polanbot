@@ -76,7 +76,7 @@ async def info(ctx, user: discord.Member):
 @bot.command(pass_context=True)
 async def serverinfo(ctx):
     embed = discord.Embed(name="{}'s info".format(ctx.message.server.name), description="Here's what I could find.", color=embedcolor)
-    embed.set_author(name="Maki")
+    embed.set_author(name="polanbot")
     embed.add_field(name="Name", value=ctx.message.server.name, inline=True)
     embed.add_field(name="ID", value=ctx.message.server.id, inline=True)
     embed.add_field(name="Roles", value=len(ctx.message.server.roles), inline=True)
